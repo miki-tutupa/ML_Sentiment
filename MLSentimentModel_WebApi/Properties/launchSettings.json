@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "MLSentimentModel_WebApi": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:54681;http://localhost:54682"
+    }
+  }
+}
