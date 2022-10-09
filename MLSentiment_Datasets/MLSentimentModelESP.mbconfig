@@ -1,0 +1,214 @@
+﻿{
+  "TrainingTime": 600,
+  "Scenario": "Classification",
+  "DataSource": {
+    "Type": "TabularFile",
+    "Version": 1,
+    "FilePath": "C:\\Users\\Miki\\Downloads\\wikiDetoxAnnotated40kRowsSpanish.csv",
+    "Delimiter": ";",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "Etiqueta",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "rev_id",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "comentario",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "a�o",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "conectado",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "ns",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "muestra",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "separar",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 1,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LbfgsMaximumEntropyMulti",
+        "Score": 0.815401409529646,
+        "RuntimeInSeconds": 52.301
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LbfgsMaximumEntropyMulti",
+        "Score": 0.80687528726827029,
+        "RuntimeInSeconds": 41.469
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LbfgsLogisticRegressionOva",
+        "Score": 0.80302206220315608,
+        "RuntimeInSeconds": 47.793
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastForestOva",
+        "Score": 0.70071753230172107,
+        "RuntimeInSeconds": 28.785
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastForestOva",
+        "Score": 0.70071753230172107,
+        "RuntimeInSeconds": 30.351
+      }
+    ],
+    "Pipeline": {
+      "parameter": {
+        "0": {
+          "OutputColumnNames": [
+            "ns"
+          ],
+          "InputColumnNames": [
+            "ns"
+          ]
+        },
+        "1": {
+          "OutputColumnNames": [
+            "rev_id"
+          ],
+          "InputColumnNames": [
+            "rev_id"
+          ]
+        },
+        "10": {
+          "L1Regularization": 0.03125,
+          "L2Regularization": 0.060161896,
+          "LabelColumnName": "Etiqueta",
+          "FeatureColumnName": "Features"
+        },
+        "11": {
+          "OutputColumnName": "PredictedLabel",
+          "InputColumnName": "PredictedLabel"
+        },
+        "2": {
+          "InputColumnName": "comentario",
+          "OutputColumnName": "comentario"
+        },
+        "3": {
+          "InputColumnName": "a�o",
+          "OutputColumnName": "a�o"
+        },
+        "4": {
+          "InputColumnName": "conectado",
+          "OutputColumnName": "conectado"
+        },
+        "5": {
+          "InputColumnName": "muestra",
+          "OutputColumnName": "muestra"
+        },
+        "6": {
+          "InputColumnName": "separar",
+          "OutputColumnName": "separar"
+        },
+        "7": {
+          "InputColumnNames": [
+            "ns",
+            "rev_id",
+            "comentario",
+            "a�o",
+            "conectado",
+            "muestra",
+            "separar"
+          ],
+          "OutputColumnName": "Features"
+        },
+        "8": {
+          "OutputColumnName": "Etiqueta",
+          "InputColumnName": "Etiqueta"
+        },
+        "9": {
+          "OutputColumnNames": [
+            "Features"
+          ],
+          "InputColumnNames": [
+            "Features"
+          ]
+        }
+      },
+      "estimators": [
+        "OneHotEncoding",
+        "ReplaceMissingValues",
+        "FeaturizeText",
+        "FeaturizeText",
+        "FeaturizeText",
+        "FeaturizeText",
+        "FeaturizeText",
+        "Concatenate",
+        "MapValueToKey",
+        "NormalizeMinMax",
+        "LbfgsMaximumEntropyMulti",
+        "MapKeyToValue"
+      ]
+    },
+    "MetricName": "MacroAccuracy"
+  },
+  "Type": "TrainingConfig",
+  "Version": 2
+}

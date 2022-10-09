@@ -12,25 +12,7 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
     <PackageReference Include="Microsoft.ML" Version="1.7.1" />
   </ItemGroup>
-  <ItemGroup Label="MLSentimentModel">
-    <None Include="MLSentimentModel.consumption.cs">
-      <DependentUpon>MLSentimentModel.mbconfig</DependentUpon>
-    </None>
-    <None Include="MLSentimentModel.training.cs">
-      <DependentUpon>MLSentimentModel.mbconfig</DependentUpon>
-    </None>
-    <None Include="MLSentimentModel.zip">
-      <DependentUpon>MLSentimentModel.mbconfig</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="MLSentimentModelESP.consumption.cs">
-      <DependentUpon>MLSentimentModelESP.mbconfig</DependentUpon>
-    </None>
-    <None Include="MLSentimentModelESP.training.cs">
-      <DependentUpon>MLSentimentModelESP.mbconfig</DependentUpon>
-    </None>
-  </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ML_Sentiment\ML_Sentiment.csproj" />
+    <ProjectReference Include="..\MLSentiment_Datasets\MLSentiment_Datasets.csproj" />
   </ItemGroup>
 </Project>
