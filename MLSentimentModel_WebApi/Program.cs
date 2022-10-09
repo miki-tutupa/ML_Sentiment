@@ -4,6 +4,8 @@ using Microsoft.Extensions.ML;
 using Microsoft.OpenApi.Models;
 using System.IO;
 using ML_Sentiment;
+using System.Reflection;
+using System;
 
 #region Builder
 // Configure app
@@ -26,7 +28,10 @@ builder.Services.AddEndpointsApiExplorer();
 #region Swagger
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Sentimentator", Description = "Sentimentator: Machine Learning API to predict the sentiment of a given text.", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Sentimentator", Description = "Machine Learning API to predict the sentiment of a given text.", Version = "v1.04" });
+    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    c.IncludeXmlComments(xmlPath);
 });
 #endregion
 builder.Services.AddControllers();

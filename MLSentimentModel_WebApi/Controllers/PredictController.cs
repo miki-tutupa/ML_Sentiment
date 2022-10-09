@@ -16,6 +16,12 @@ namespace MLSentimentModel_WebApi.Controllers
             _predictionEnginePool = predictionEnginePool;
         }
 
+        /// <summary>
+        /// Predicts the sentiment of the comment in ENGLISH.
+        /// 0 = No toxic, 1 = Toxic
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult<MLSentimentModel.ModelOutput> Post([FromBody] MLSentimentModel.ModelInput input)
         {

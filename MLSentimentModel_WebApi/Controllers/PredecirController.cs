@@ -16,6 +16,12 @@ namespace MLSentimentModel_WebApi.Controllers
             _predictionEnginePool = predictionEnginePool;
         }
 
+        /// <summary>
+        /// Predice el sentimiento del comentario en ESPAÑOL.
+        /// 0 = No tóxico, 1 = Tóxico
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult<MLSentimentModelESP.ModelOutputESP> Post([FromBody] MLSentimentModelESP.ModelInputESP input)
         {
