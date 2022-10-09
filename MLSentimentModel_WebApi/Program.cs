@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 #region Machine Learning Datasets
 // ENG
-string solutionPath = Directory.GetParent(Directory.GetCurrentDirectory()).FullName;
+string solutionPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
 string modelPath = Path.Combine(solutionPath, "MLSentiment_Datasets", "MLSentimentModel.zip");
 builder.Services.AddPredictionEnginePool<MLSentimentModel.ModelInput, MLSentimentModel.ModelOutput>()
     .FromFile("MLSentimentModel", modelPath);
