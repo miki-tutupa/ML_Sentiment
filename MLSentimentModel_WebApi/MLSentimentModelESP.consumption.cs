@@ -1,5 +1,8 @@
 ﻿using Microsoft.ML;
 using Microsoft.ML.Data;
+using System;
+using System.IO;
+
 namespace ML_Sentiment
 {
     public partial class MLSentimentModelESP
