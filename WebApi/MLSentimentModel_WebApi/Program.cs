@@ -12,13 +12,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 #region Machine Learning Datasets
 // ENG
-string solutionPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-string modelPath = Path.Combine(solutionPath, "MLSentiment_Datasets", "MLSentimentModel.zip");
+string modelPath = Path.GetFullPath("../../Datasets/MLSentiment_Datasets/MLSentimentModel.zip");
 builder.Services.AddPredictionEnginePool<MLSentimentModel.ModelInput, MLSentimentModel.ModelOutput>()
     .FromFile("MLSentimentModel", modelPath);
 
 // ESP
-string modelPathESP = Path.Combine(solutionPath, "MLSentiment_Datasets", "MLSentimentModelESP.zip");
+string modelPathESP = Path.GetFullPath("../../Datasets/MLSentiment_Datasets/MLSentimentModelESP.zip");
 builder.Services.AddPredictionEnginePool<MLSentimentModelESP.ModelInputESP, MLSentimentModelESP.ModelOutputESP>()
     .FromFile("MLSentimentModelESP", modelPathESP);
 #endregion

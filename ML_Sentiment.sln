@@ -3,12 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MLSentimentModel_WebApi", "MLSentimentModel_WebApi\MLSentimentModel_WebApi.csproj", "{67AABD99-BE1F-4856-9F8C-48608262D9EF}"
-	ProjectSection(ProjectDependencies) = postProject
-		{851D2FA0-7036-4656-9815-FBF0CE823899} = {851D2FA0-7036-4656-9815-FBF0CE823899}
-	EndProjectSection
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Datasets", "Datasets", "{371C3DBF-1A3F-44BB-AB04-C024C96AF111}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MLSentiment_Datasets", "MLSentiment_Datasets\MLSentiment_Datasets.csproj", "{851D2FA0-7036-4656-9815-FBF0CE823899}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{9F56DE60-CA1E-43F3-AFCE-72E0F2BA1C5C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MLSentiment_Datasets", "Datasets\MLSentiment_Datasets\MLSentiment_Datasets.csproj", "{07C8B40C-B225-4BB2-AD9A-89A165B34699}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MLSentimentModel_WebApi", "WebApi\MLSentimentModel_WebApi\MLSentimentModel_WebApi.csproj", "{998AF3AB-FA2A-4E1B-A2E6-5326FB8BCB20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,17 +17,21 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{67AABD99-BE1F-4856-9F8C-48608262D9EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{67AABD99-BE1F-4856-9F8C-48608262D9EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{67AABD99-BE1F-4856-9F8C-48608262D9EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{67AABD99-BE1F-4856-9F8C-48608262D9EF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{851D2FA0-7036-4656-9815-FBF0CE823899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{851D2FA0-7036-4656-9815-FBF0CE823899}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{851D2FA0-7036-4656-9815-FBF0CE823899}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{851D2FA0-7036-4656-9815-FBF0CE823899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07C8B40C-B225-4BB2-AD9A-89A165B34699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07C8B40C-B225-4BB2-AD9A-89A165B34699}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07C8B40C-B225-4BB2-AD9A-89A165B34699}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07C8B40C-B225-4BB2-AD9A-89A165B34699}.Release|Any CPU.Build.0 = Release|Any CPU
+		{998AF3AB-FA2A-4E1B-A2E6-5326FB8BCB20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{998AF3AB-FA2A-4E1B-A2E6-5326FB8BCB20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{998AF3AB-FA2A-4E1B-A2E6-5326FB8BCB20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{998AF3AB-FA2A-4E1B-A2E6-5326FB8BCB20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{07C8B40C-B225-4BB2-AD9A-89A165B34699} = {371C3DBF-1A3F-44BB-AB04-C024C96AF111}
+		{998AF3AB-FA2A-4E1B-A2E6-5326FB8BCB20} = {9F56DE60-CA1E-43F3-AFCE-72E0F2BA1C5C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CF8EA13C-BA77-4742-B832-CEE08764CBE6}

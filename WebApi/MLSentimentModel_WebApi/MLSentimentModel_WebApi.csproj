@@ -13,6 +13,6 @@
     <PackageReference Include="Microsoft.ML" Version="1.7.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MLSentiment_Datasets\MLSentiment_Datasets.csproj" />
+    <ProjectReference Include="..\..\Datasets\MLSentiment_Datasets\MLSentiment_Datasets.csproj" />
   </ItemGroup>
 </Project>
