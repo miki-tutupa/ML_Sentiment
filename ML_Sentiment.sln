@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ML_Sentiment", "ML_Sentimen
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MLSentimentModel_WebApi", "MLSentimentModel_WebApi\MLSentimentModel_WebApi.csproj", "{67AABD99-BE1F-4856-9F8C-48608262D9EF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MLSentimentModelESP_WebApi", "MLSentimentModelESP_WebApi\MLSentimentModelESP_WebApi.csproj", "{0E68EC26-96B9-4411-A79D-51D6010F8455}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{67AABD99-BE1F-4856-9F8C-48608262D9EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67AABD99-BE1F-4856-9F8C-48608262D9EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67AABD99-BE1F-4856-9F8C-48608262D9EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E68EC26-96B9-4411-A79D-51D6010F8455}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E68EC26-96B9-4411-A79D-51D6010F8455}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E68EC26-96B9-4411-A79D-51D6010F8455}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E68EC26-96B9-4411-A79D-51D6010F8455}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

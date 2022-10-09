@@ -20,4 +20,16 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup Label="MLSentimentModelESP">
+    <None Include="MLSentimentModelESP.consumption.cs">
+      <DependentUpon>MLSentimentModelESP.mbconfig</DependentUpon>
+    </None>
+    <None Include="MLSentimentModelESP.training.cs">
+      <DependentUpon>MLSentimentModelESP.mbconfig</DependentUpon>
+    </None>
+    <None Include="MLSentimentModelESP.zip">
+      <DependentUpon>MLSentimentModelESP.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
