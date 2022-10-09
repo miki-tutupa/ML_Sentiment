@@ -49,39 +49,11 @@ namespace ML_Sentiment
         #region model output class
         public class ModelOutput
         {
-            [ColumnName(@"Etiqueta")]
-            public uint Etiqueta { get; set; }
-
-            [ColumnName(@"rev_id")]
-            public float Rev_id { get; set; }
-
-            [ColumnName(@"comentario")]
-            public float[] Comentario { get; set; }
-
-            [ColumnName(@"a�o")]
-            public float[] A_o { get; set; }
-
-            [ColumnName(@"conectado")]
-            public float[] Conectado { get; set; }
-
-            [ColumnName(@"ns")]
-            public float[] Ns { get; set; }
-
-            [ColumnName(@"muestra")]
-            public float[] Muestra { get; set; }
-
-            [ColumnName(@"separar")]
-            public float[] Separar { get; set; }
-
-            [ColumnName(@"Features")]
-            public float[] Features { get; set; }
-
             [ColumnName(@"PredictedLabel")]
             public float PredictedLabel { get; set; }
 
             [ColumnName(@"Score")]
             public float[] Score { get; set; }
-
         }
 
         #endregion

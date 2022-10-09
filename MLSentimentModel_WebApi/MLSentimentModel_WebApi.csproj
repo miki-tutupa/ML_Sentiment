@@ -4,6 +4,10 @@
     <LangVersion>preview</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="MLSentimentModelESP.consumption.cs" />
+    <Compile Remove="MLSentimentModelESP.training.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.ML" Version="1.5.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
     <PackageReference Include="Microsoft.ML" Version="1.7.1" />
@@ -19,5 +23,14 @@
       <DependentUpon>MLSentimentModel.mbconfig</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="MLSentimentModelESP.consumption.cs">
+      <DependentUpon>MLSentimentModelESP.mbconfig</DependentUpon>
+    </None>
+    <None Include="MLSentimentModelESP.training.cs">
+      <DependentUpon>MLSentimentModelESP.mbconfig</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ML_Sentiment\ML_Sentiment.csproj" />
   </ItemGroup>
 </Project>
