@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <!-- Ionic icons -->
+    <link href="https://unpkg.com/ionicons@4.2.0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+
+    <title>Sentimentator - Free Machine Learning service to predict the sentiment of a given text.</title>
+</head>
+
+<body>
+
+    <!-- N A V B A R -->
+    <nav class="navbar navbar-default navbar-expand-lg fixed-top custom-navbar">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon ion-md-menu"></span>
+        </button>
+        <img src="images/logo.png" class="img-fluid nav-logo-mobile" alt="F$%@#!">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="container">
+                <img src="images/logo.png" class="img-fluid nav-logo-desktop" alt="F$%@#!">
+                <ul class="navbar-nav ml-auto nav-right" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
+                    <li class="nav-item nav-custom-link">
+                        <a class="nav-link" href="index.html">Try it online <i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
+                    </li>
+                    <li class="nav-item nav-custom-link">
+                        <a class="nav-link" href="#marketing">Developer API <i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
+                    </li>
+                    <li class="nav-item nav-custom-link">
+                        <a class="nav-link" href="#testimonials">Examples <i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
+                    </li>
+                    <li class="nav-item nav-custom-link">
+                        <a class="nav-link" href="#call-to-action">Help to improve the model <i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
+                    </li>
+                    <!--<li class="nav-item nav-custom-link btn btn-demo-small">
+                        <a class="nav-link" href="#">Try for Free <i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- E N D  N A V B A R -->
+    <!-- H E R O -->
+    <section id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 content-box hero-content">
+                    <span>Machine Learning</span>
+                    <h1>Free <b>Sentiment Analysis</b></h1>
+                    <p>Sentimentator is an application based on Machine Learning to predict the sentiment of a given text.</p>
+                    <br />
+                    <p style="font-size:14px;"><em>Try it online:</em></p>
+                    <form name="sentimentator">
+                        <input type="text" class="input" placeholder="Enter the message to predict..." />
+                        <br />
+                        <submit class="btn btn-try">Predict the message sentiment</submit>
+                    </form>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="position: relative;">
+                    <div style="position:absolute;top:150px;left:130px;width:210px">
+                        <p>/text_to_predict/</p>
+                        <hr />
+                        <h6><span class="rating" style="background-color: red;color:white; font-weight: bold;">TOXIC</span></h6>
+                        <ul>
+                            <li><small>No Toxic score: <strong>/notoxicscore/</strong></small></li>
+                            <li><small>Toxic score: <strong>/toxicscore/</strong></small></li>
+                        </ul>
+                    </div>
+                    <img src="images/iphone.png" class="img-fluid" alt="Sentiment prediction result">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- E N D  H E R O -->
+    <!-- E N D  M A R K E T I N G -->
+    <section id="marketing">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="content-box">
+                        <span>API REST</span>
+                        <h2>Automate your moderation</h2>
+                        <p>Consume our API REST to automate your comment moderation processes. Super easy implementation!</p>
+                        <a href="/swagger" class="btn btn-regular">API REST Documentation</a>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <img src="images/woman.jpg" class="img-fluid" alt="Detect Toxic Messages">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- E N D  M A R K E T I N G -->
+    <!-- T E S T I M O N I A L S -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="title-block">
+                <h2>Two examples</h2>
+                <p>Look at these two comment examples, and the sentiment predicted by the Machine Learning Model</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="testimonial-box">
+                        <div class="row personal-info">
+                            <div class="col-md-2 col-xs-2">
+                                <div class="profile-picture review-notoxic"></div>
+                            </div>
+                            <div class="col-md-10 col-xs-10">
+                                <h6>Nice woman <span class="rating" style="background-color: green;"><i class="icon ion-md-star"></i> NO TOXIC</span></h6>
+                                <small>No Toxic score: 0.99925405 | Toxic score: 0.00074587786</small>
+                            </div>
+                        </div>
+                        <p>Thanks to your sentiment prediction API I have managed to save dozens of hours moderating comments in my own application. Super easy integration.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testimonial-box">
+                        <div class="row personal-info">
+                            <div class="col-md-2 col-xs-2">
+                                <div class="profile-picture review-toxic"></div>
+                            </div>
+                            <div class="col-md-10 col-xs-10">
+                                <h6>Angry guy <span class="rating" style="background-color: red;"><i class="icon ion-md-star"></i> TOXIC</span></h6>
+                                <small>No Toxic score: 0.0023939009 | Toxic score: 0.99760604</small>
+                            </div>
+                        </div>
+                        <p>This sh**ty app is useless, you better stay in bed. Also you pretend that I have to program my application to consume your smelly API. F**k you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- E N D  T E S T I M O N I A L S -->
+    <!-- P R I C I N G
+    <section id="pricing">
+        <div class="container">
+            <div class="title-block">
+                <h2>Plans and Pricing</h2>
+                <p>The best software to develop perfect content and advertising strategies to increase leads and sales.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="pricing-box">
+                        <h3 class="demo">Demo Version</h3>
+                        <h6>Free</h6>
+                        <small>forever</small>
+                        <p>Demo gives you full access to all features for 7 days</p>
+                        <div class="divider-light"></div>
+                        <ul>
+                            <li><i class="icon ion-md-checkmark-circle-outline demo"></i>Marketing plan</li>
+                            <li><i class="icon ion-md-checkmark-circle-outline demo"></i>Seo reporting tool</li>
+                            <li><i class="icon ion-md-checkmark-circle-outline demo"></i>Keywords explorer</li>
+                            <li><i class="icon ion-md-checkmark-circle-outline demo"></i>Competitive analysis</li>
+                            <li><i class="icon ion-md-checkmark-circle-outline demo"></i>Five projects - <span class="demo">¡New!</span></li>
+                        </ul>
+                        <div class="text-center">
+                            <a href="#" class="btn btn-demo">Demo version</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-box">
+                        <h3>Standard Version</h3>
+                        <h6>$9</h6>
+                        <small>per month</small>
+                        <p>Outrank your competitors with this amazing software</p>
+                        <div class="divider-light"></div>
+                        <ul>
+                            <li><i class="icon ion-md-checkmark-circle-outline"></i>Marketing plan</li>
+                            <li><i class="icon ion-md-checkmark-circle-outline"></i>Seo reporting tool</li>
+                            <li><i class="icon ion-md-checkmark-circle-outline"></i>Keywords explorer</li>
+                            <li><i class="icon ion-md-checkmark-circle-outline"></i>Competitive analysis</li>
+                            <li><i class="icon ion-md-checkmark-circle-outline"></i>Unlimited projects - <span>¡New!</span></li>
+                        </ul>
+                        <div class="text-center">
+                            <a href="#" class="btn btn-buy">Buy now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-box">
+                        <h3>Agency Version</h3>
+                        <h6>$29</h6>
+                        <small>per month</small>
+                        <p>For agencies and businesses with extensive web presence</p>
+                        <div class="divider-light"></div>
+                        <ul>
+                            <li><i class="icon ion-md-checkmark-circle-outline"></i>Marketing plan</li>
+                            <li><i class="icon ion-md-checkmark-circle-outline"></i>Seo reporting tool</li>
+                            <li><i class="icon ion-md-checkmark-circle-outline"></i>Keywords explorer</li>
+                            <li><i class="icon ion-md-checkmark-circle-outline"></i>Competitive analysis</li>
+                            <li><i class="icon ion-md-checkmark-circle-outline"></i>Unlimited projects - <span>¡New!</span></li>
+                        </ul>
+                        <div class="text-center">
+                            <a href="#" class="btn btn-buy">Buy now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- E N D  P R I C I N G -->
+    <!-- C A L L  T O  A C T I O N -->
+    <section id="call-to-action">
+        <div class="container text-center">
+            <h2>Help me to improve the model!</h2>
+            <div class="title-block">
+                <p>I'm looking for real comments and texts with sentiment rated by a human (toxic vs. no toxic) to improve the Machine Learning Model.</p>
+                <p>If you are the owner or moderator of a site with messages or comments please contact us.</p>
+                <a href="mailto:srmikimaus@protonmail.com" class="btn btn-regular">Contact me</a>
+            </div>
+        </div>
+    </section>
+    <!-- E N D  C A L L  T O  A C T I O N -->
+    <!--  F O O T E R  -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Menu</h5>
+                    <ul>
+                        <li><a href="#">Try it online</a></li>
+                        <li><a href="#">Developer API</a></li>
+                        <li><a href="#">Examples</a></li>
+                        <li><a href="#">Help to improve the model</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Website images credits</h5>
+                    <ul>
+                        <li><a href="https://www.freepik.es/vector-gratis/juego-rock-paper-scissor-signo-dedo-medio_16294604.htm" target="_blank">Logo from DrawingMyDiary</a></li>
+                        <li><a href="https://www.freepik.es/foto-gratis/mujer-harta-escuchar-palabrotas-argumentos-su-vez-retrato-descontento-inseguro_19378065.htm" target="_blank">Photo by benzoix</a> and <a href="https://phraseit.net" target="_blank">Phrase.it</a></li>
+                        <li><a href="https://www.pexels.com/photo/nice-girl-in-coat-cuddling-white-lamb-11503178/" target="_blank">Photo by Anna Shevchuk</a></li>
+                        <li><a href="https://www.pexels.com/photo/man-in-pink-shirt-shouting-8727490/" target="_blank">Photo by Tima Miroshnichenko</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-3">
+                    <h5>Sentimentator</h5>
+                    <p>Free Machine Learning service to predict the sentiment of a given text. Automate your comment moderation processes with our API REST.</p>
+                    <p><a href="mailto:srmikimaus@protonmail.com" class="external-links">srmikimaus@protonmail.com</a></p>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <a href="#"><i class="icon ion-logo-linkedin"></i></a>
+                    <a href="#"><i class="icon ion-logo-twitter"></i></a>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <small>2022 &copy; All rights reserved.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--  E N D  F O O T E R  -->
+    <!-- External JavaScripts -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>
