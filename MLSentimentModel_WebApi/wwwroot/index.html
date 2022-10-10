@@ -71,7 +71,10 @@
                     <div style="text-align: center;"><small><a href="javascript:;" @click="initialStateTotal">Clear form</a></small></div>
                 </div>
                 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="position: relative;">
-                    <div style="position:absolute;top:150px;left:130px;width:210px">
+                    <div style="position:absolute;top:150px;left:130px;width:210px;text-align:center;">
+                        <img src="images/icon.png" width="80" class="img-fluid" alt="Sentimentator">
+                        <br />
+                        <br />
                         <p>{{messageToPredict}}</p>
                         <div v-if="sentiment != null">
                             <br />
