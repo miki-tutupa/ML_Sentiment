@@ -5,6 +5,19 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="wwwroot\favicon-16x16.png" />
+    <None Include="wwwroot\favicon-32x32.png" />
+    <None Include="wwwroot\favicon.ico" />
+    <None Include="wwwroot\images\angryguy.jpg" />
+    <None Include="wwwroot\images\call-to-action.png" />
+    <None Include="wwwroot\images\icon.png" />
+    <None Include="wwwroot\images\iphone.png" />
+    <None Include="wwwroot\images\logo.png" />
+    <None Include="wwwroot\images\nicewoman.jpg" />
+    <None Include="wwwroot\images\woman.jpg" />
+    <None Include="wwwroot\style\style.css" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.ML" Version="1.5.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
     <PackageReference Include="Microsoft.ML" Version="1.7.1" />
@@ -16,8 +29,5 @@
     <None Update="MLModels\MLSentimentModelESP.zip">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="wwwroot\images\" />
   </ItemGroup>
 </Project>

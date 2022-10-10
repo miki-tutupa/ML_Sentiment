@@ -8,10 +8,12 @@ using System.IO;
 using System.Reflection;
 
 #region Builder
+
 // Configure app
 var builder = WebApplication.CreateBuilder(args);
 
 #region Machine Learning Datasets
+
 // ENG
 string modelPath = Path.Combine(AppContext.BaseDirectory, "MLModels", "MLSentimentModel.zip");
 builder.Services.AddPredictionEnginePool<MLSentimentModel.ModelInput, MLSentimentModel.ModelOutput>()
@@ -21,11 +23,22 @@ builder.Services.AddPredictionEnginePool<MLSentimentModel.ModelInput, MLSentimen
 string modelPathESP = Path.Combine(AppContext.BaseDirectory, "MLModels", "MLSentimentModelESP.zip"); ;
 builder.Services.AddPredictionEnginePool<MLSentimentModelESP.ModelInputESP, MLSentimentModelESP.ModelOutputESP>()
     .FromFile("MLSentimentModelESP", modelPathESP);
+
+#endregion
+
+#region CORS
+
+builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
+{
+    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+}));
+
 #endregion
 
 builder.Services.AddEndpointsApiExplorer();
 
 #region Swagger
+
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Sentimentator", Description = "Machine Learning API to predict the sentiment of a given text.", Version = "v1.04" });
@@ -33,24 +46,31 @@ builder.Services.AddSwaggerGen(c =>
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
     c.IncludeXmlComments(xmlPath);
 });
+
 #endregion
+
 builder.Services.AddControllers();
+
 #endregion
 
 #region App
+
 var app = builder.Build();
-app.UseStaticFiles();
 
 #region Swagger
-app.UseSwagger();
 
+app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Sentimentator");
-    //c.RoutePrefix = string.Empty; // Set Swagger UI at apps root
 });
+
 #endregion
+
+app.UseCors("corsapp");
+app.UseStaticFiles();
 app.UseHttpsRedirection();
 app.MapControllers();
 app.Run();
+
 #endregion

@@ -375,11 +375,11 @@ section {
 }
 
 .review-notoxic {
-    background-image: url('images/nicewoman.jpg');
+    background-image: url('../images/nicewoman.jpg');
 }
 
 .review-toxic {
-    background-image: url('images/angryguy.jpg');
+    background-image: url('../images/angryguy.jpg');
 }
 
 .personal-info {
@@ -456,7 +456,7 @@ section {
 ===============================================*/
 
 #call-to-action {
-    background-image: url('images/call-to-action.png');
+    background-image: url('../images/call-to-action.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
