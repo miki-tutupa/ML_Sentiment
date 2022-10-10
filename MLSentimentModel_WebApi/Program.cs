@@ -2,10 +2,10 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.ML;
 using Microsoft.OpenApi.Models;
-using System.IO;
 using ML_Sentiment;
-using System.Reflection;
 using System;
+using System.IO;
+using System.Reflection;
 
 #region Builder
 // Configure app
@@ -13,12 +13,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 #region Machine Learning Datasets
 // ENG
-string modelPath = Path.GetFullPath("MLSentimentModel.zip");
+string modelPath = Path.Combine(AppContext.BaseDirectory, "MLSentimentModel.zip"); ;
 builder.Services.AddPredictionEnginePool<MLSentimentModel.ModelInput, MLSentimentModel.ModelOutput>()
     .FromFile("MLSentimentModel", modelPath);
 
 // ESP
-string modelPathESP = Path.GetFullPath("MLSentimentModelESP.zip");
+string modelPathESP = Path.Combine(AppContext.BaseDirectory, "MLSentimentModelESP.zip"); ;
 builder.Services.AddPredictionEnginePool<MLSentimentModelESP.ModelInputESP, MLSentimentModelESP.ModelOutputESP>()
     .FromFile("MLSentimentModelESP", modelPathESP);
 #endregion
