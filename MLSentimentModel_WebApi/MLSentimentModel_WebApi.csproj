@@ -10,10 +10,10 @@
     <PackageReference Include="Microsoft.ML" Version="1.7.1" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="MLSentimentModel.zip">
+    <None Update="MLModels\MLSentimentModel.zip">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="MLSentimentModelESP.zip">
+    <None Update="MLModels\MLSentimentModelESP.zip">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
