@@ -45,6 +45,7 @@ app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Sentimentator");
+    c.RoutePrefix = string.Empty; // Set Swagger UI at apps root
 });
 #endregion
 app.UseHttpsRedirection();
