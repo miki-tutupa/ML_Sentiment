@@ -65,23 +65,24 @@
                     <p>Sentimentator is an application based on Machine Learning to predict the sentiment of a given text.</p>
                     <br />
                     <p style="font-size:14px;"><em>Try it online:</em></p>
-                    <form name="sentimentator" id="sentimentator">
-                        <input type="text" name="messageToPredict" id="messageToPredict" class="input" placeholder="Enter the message to predict..." />
-                        <br />
-                        <submit class="btn btn-try">Predict the message sentiment</submit>
-                    </form>
+                    <input type="text" v-model="messageToPredict" v-on:keyup="initialState" class="input" placeholder="Enter the message to predict..." />
+                    <button @click="predictMessage" class="btn btn-try">Predict the message sentiment</button>
+                    <br />
+                    <div style="text-align: center;"><small><a href="javascript:;" @click="initialStateTotal">Clear form</a></small></div>
                 </div>
                 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="position: relative;">
                     <div style="position:absolute;top:150px;left:130px;width:210px">
-                        <p>/text_to_predict/</p>
-                        <hr />
-                        <h6><span class="rating" style="background-color: red;color:white; font-weight: bold;">TOXIC</span></h6>
-                        <ul>
-                            <li><small>No Toxic score: <strong>/notoxicscore/</strong></small></li>
-                            <li><small>Toxic score: <strong>/toxicscore/</strong></small></li>
-                        </ul>
+                        <p>{{messageToPredict}}</p>
+                        <div v-if="sentiment != null">
+                            <br />
+                            <h6 v-if="sentiment == 'Toxic'"><span class="rating" style="background-color:red;color:white;font-weight:bold;">{{sentiment}}</span></h6>
+                            <h6 v-if="sentiment == 'No toxic'"><span class="rating" style="background-color:green;color:white;font-weight:bold;">{{sentiment}}</span></h6>
+                            <ul>
+                                <li><small>No Toxic score: <strong>{{noToxicScore}}</strong></small></li>
+                                <li><small>Toxic score: <strong>{{toxicScore}}</strong></small></li>
+                            </ul>
+                        </div>
                     </div>
-                    info: {{ info }}
                     <img src="images/iphone.png" class="img-fluid" alt="Sentiment prediction result">
                 </div>
             </div>
