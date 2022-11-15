@@ -20,9 +20,9 @@ builder.Services.AddPredictionEnginePool<MLSentimentModel.ModelInput, MLSentimen
     .FromFile("MLSentimentModel", modelPath);
 
 // ESP
-string modelPathESP = Path.Combine(AppContext.BaseDirectory, "MLModels", "MLSentimentModelESP.zip"); ;
-builder.Services.AddPredictionEnginePool<MLSentimentModelESP.ModelInputESP, MLSentimentModelESP.ModelOutputESP>()
-    .FromFile("MLSentimentModelESP", modelPathESP);
+//string modelPathESP = Path.Combine(AppContext.BaseDirectory, "MLModels", "MLSentimentModelESP.zip"); ;
+//builder.Services.AddPredictionEnginePool<MLSentimentModelESP.ModelInputESP, MLSentimentModelESP.ModelOutputESP>()
+//    .FromFile("MLSentimentModelESP", modelPathESP);
 
 #endregion
 
